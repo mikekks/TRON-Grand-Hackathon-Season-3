@@ -7,7 +7,9 @@
 @import './styles/components/WalletMakeStyle.scss';
 @import './styles/components/WalletTabsStyle.scss';
 
-@import './styles/components/WalletPageComponents/Wallet03Mnemonic.scss';
+@import './styles/components/WalletPageComponents/Wallet00TabStyle.scss';
+@import './styles/components/WalletPageComponents/Wallet01CreateStyle.scss';
+@import './styles/components/WalletPageComponents/Wallet02Mnemonic.scss';
 
 body {
   margin: 0;

@@ -16,7 +16,7 @@ const SecondTab = () => {
         <div className="SecondTab">
             <div className="Wallet">
                 <p className="WalletAllBalance">1.594 ETH</p> {/* 코인(토큰) 보유량 */}
-                <div className="WalletAccountContainer">
+                <div className="WalletAccountContainer" onClick={() => {navigator.clipboard.writeText("0xab...1234")}}>
                     {/* address 표시란 */}
                     <span>0xab...1234</span><span className="WalletAccountCopy"><FaCopy /></span>
                 </div>

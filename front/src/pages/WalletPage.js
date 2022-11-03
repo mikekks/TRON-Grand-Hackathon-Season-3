@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Wallet01Select from "../components/WalletPageComponents/Wallet01Select";
-import Wallet02Create from "../components/WalletPageComponents/Wallet02Create";
-import Wallet03Mnemonic from "../components/WalletPageComponents/Wallet03Mnemonic";
-import Wallet04Tab from "../components/WalletPageComponents/Wallet04Tab";
+import Wallet00Tab from "../components/WalletPageComponents/Wallet00Tab";
+import Wallet01Create from "../components/WalletPageComponents/Wallet01Create";
+import Wallet02Mnemonic from "../components/WalletPageComponents/Wallet02Mnemonic";
+
 
 {/*
 ==============================
@@ -16,11 +16,9 @@ Todo list
 */}
 
 const WalletPage = () => {
-
     // Wallet Page 하위의 컴포넌트 순서 상태를 관리하는 hook
     // 지갑 선택(1) -> 지갑 생선(2) -> 지갑 니모닉(3) -> 지갑 페이지(4)의 순서로 state가 관리된다.
-    const [page, setPage] = useState(1);
-
+    const [page, setPage] = useState("page");
     // 하위 컴포넌트들로부터 특정 이벤트 발생시 choosePage(int)가 실행되고, 이 int의 값에 따라 페이지가 변경된다.
     // Flow 상으로 페이지가 뒤로 가는 것은 아직 구현하지 않은 상태이며, 이는 이후 뒤로가기 버튼이 구현된 이후에 추가한다.
     const choosePage = (pg) => {
@@ -30,14 +28,15 @@ const WalletPage = () => {
     // 페이지에서 표시할 컴포넌트를 정한다. 이는 상단의 'page' state 값으로 정한다.
     const WalletPages = () => {
         switch(page) {
-            case 1:
-                return (<Wallet01Select choosePage = {choosePage}/>);
-            case 2:
-                return (<Wallet02Create choosePage = {choosePage}/>);
-            case 3:
-                return (<Wallet03Mnemonic choosePage = {choosePage}/>);
-            case 4:
-                return (<Wallet04Tab />);
+            case "page":
+                return (<Wallet00Tab choosePage = {choosePage}/>);
+            case "page2_1":
+                return (<Wallet01Create choosePage = {choosePage}/>);
+            case "page2_2":
+                return (<Wallet02Mnemonic choosePage = {choosePage}/>);
+            // case "page2_3":
+            // case 4:
+            //     return (<Wallet04Tab />);
             default:
                 break;
         }
