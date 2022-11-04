@@ -4,6 +4,8 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { PinInput } from 'react-input-pin-code';
 
+import usePinStore from "../../store/PinStore";
+
 {/*
 ==============================
 (1031)Wallet Page에서 두번째 컴포넌트 페이지인 지갑 생성 컴포넌트입니다.
@@ -18,6 +20,8 @@ const Wallet01Create = ({ choosePage }) => {
     const [created, setCreated] = useState(false);
     const [valuess, setValues] = useState(['', '', '', '']);
     const [confirmvalues, setConfirmValues] = useState(['', '', '', '']);
+
+    const { pinNumber, PinCreated } = usePinStore(state => state);
     
     let cnt=0;
     function ValueSetting(x){
@@ -51,6 +55,9 @@ const Wallet01Create = ({ choosePage }) => {
 
     function ConfirmComplete(){
         console.log("Confirm complete");
+        PinCreated(confirmvalues);
+        console.log(confirmvalues);
+        console.log(pinNumber);
         choosePage("page2_2");
     }
 

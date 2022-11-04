@@ -4,6 +4,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import useWalletStore from "../../store/WalletStore";
+import usePinStore from "../../store/PinStore";
 {/*
 ==============================
 (1031)Wallet Page에서 세번째 컴포넌트 페이지인 니모닉 컴포넌트입니다.
@@ -19,6 +20,7 @@ const Wallet02Mnemonic = ({ choosePage }) => {
     const [mnemonic, setMnemonic] = useState(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
 
     const { WalletCreated } = useWalletStore(state => state);
+    const { pinNumber } = usePinStore(state => state);
 
     useEffect(() => {
         setMnemonic(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
@@ -26,6 +28,7 @@ const Wallet02Mnemonic = ({ choosePage }) => {
     }, []);
 
     const CompleteWalletCreate = () => {
+        console.log(pinNumber);
         WalletCreated();
         choosePage("page");
     }

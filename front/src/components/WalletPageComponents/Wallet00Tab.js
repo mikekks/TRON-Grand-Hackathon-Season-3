@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import FirstTab from "./Wallet000TabComponents/Wallet001FirstTab";
 import SecondTab from "./Wallet000TabComponents/Wallet002SecondTab";
-// import Modal from 'react-bootstrap/Modal';
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 
 import useWalletStore from "../../store/WalletStore";
+// import usePinStore from "../../store/PinStore";
+
 {/*
 ==============================
 (1031)Wallet Page에서 네번째 컴포넌트 페이지인 지갑 탭 컴포넌트입니다.
@@ -22,6 +23,7 @@ const Wallet00Tab = ({ choosePage }) => {
   const [open, setOpen] = useState(false);
 
   const { walletstatus } = useWalletStore(state => state);
+  // const { pinNumber, PinCreated } = usePinStore(state => state);
   
   const handleClose = () => setOpen(false);
   const handleOpen = () => setOpen(true);
@@ -87,7 +89,6 @@ const Wallet00Tab = ({ choosePage }) => {
         </ul>
 
         <div className="outlet">
-          {/* 탭 컴포넌트는 관리 용이를 위해 Wallet040TabComponents 디렉토리에서 따로 관리합니다. */}
           {activeTab === "tab1" ? <FirstTab /> : <SecondTab />}
         </div>
       </div>
