@@ -19,18 +19,18 @@ const Wallet02Mnemonic = ({ choosePage }) => {
     const [checked, setChecked] = useState(false);
     const [mnemonic, setMnemonic] = useState(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
 
-    const { WalletCreated } = useWalletStore(state => state);
-    const { pinNumber } = usePinStore(state => state);
+    const { WalletCreated } = useWalletStore(state => state); // 지갑이 만들어졌는지에 대한 여부 상태
+    const { pinNumber } = usePinStore(state => state); // 핀넘버 상태(상태에 대한 문제가 있어 해결중)
 
     useEffect(() => {
-        setMnemonic(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
+        setMnemonic(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']); // esLint 에러를 해결하기 위해 단순히 추가한 코드, 출시 시에는 지워야 함
         console.log(mnemonic);
     }, []);
 
-    const CompleteWalletCreate = () => {
+    const CompleteWalletCreate = () => { // 지갑 생성이 완료되면
         console.log(pinNumber);
         WalletCreated();
-        choosePage("page");
+        choosePage("page"); // 지갑 페이지로 전환
     }
 
     // 이 컴포넌트는 하단의 버튼을 관리한다.
@@ -52,12 +52,12 @@ const Wallet02Mnemonic = ({ choosePage }) => {
         }
     }
 
-    const MnemonicCopy = () => {
+    const MnemonicCopy = () => { // 니모닉을 클립보드에 복사
         let temp = mnemonic.join(" ");
         navigator.clipboard.writeText(temp);
     }
 
-    const MnemonicJSON = () => {
+    const MnemonicJSON = () => { // 니모닉을 JSON 파일로 다운로드
         const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
             JSON.stringify(mnemonic)
         )}`;
@@ -129,7 +129,7 @@ const Wallet02Mnemonic = ({ choosePage }) => {
                 <br />
                 <Row>
                     <Col>
-                        {/* 하단의 버튼은 이곳에서 따로 관리한다. */}
+                        {/* 하단의 버튼은 이곳에서 따로 관리한다. 체크박스를 클릭하면 아래 버튼이 활성화된다. */}
                         <MnemonicChecked />
                     </Col>
                 </Row>

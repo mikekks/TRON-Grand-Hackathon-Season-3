@@ -18,38 +18,34 @@ const Wallet00Tab = ({ choosePage }) => {
   // activeTab state를 통해 표시 조건에 따라 각 UI를 표시합니다.
   // activeTab == tab2(기본값) 인 경우, WALLET Tab UI 표시
   // activeTab == tab1 인 경우, SPENDING Tab UI 표시
-  const [activeTab, setActiveTab] = useState("tab1");
-  // const [wallet, setWallet] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [activeTab, setActiveTab] = useState("tab1"); // 탭 전환을 관리하는 상태
+  const [open, setOpen] = useState(false); // 모달 여닫기를 관리하는 상태
 
-  const { walletstatus } = useWalletStore(state => state);
-  // const { pinNumber, PinCreated } = usePinStore(state => state);
+  const { walletstatus } = useWalletStore(state => state); // 지갑이 만들어졌는지 관리하는 상태
   
-  const handleClose = () => setOpen(false);
-  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false); // 모달 닫는 함수
+  const handleOpen = () => setOpen(true); // 모달 여는 함수
 
   // 탭 이동 버튼 클릭시 activeTab state를 변경하는 함수
   const handleTab1 = () => {
-    setActiveTab("tab1");
+    setActiveTab("tab1"); // 탭1로 전환
   };
   const handleTab2 = () => {
-    if (walletstatus == false) {
+    if (walletstatus == false) { // 만약 지갑이 없다면
       handleOpen(); // 지갑 만들기 modal 열기
     }
-    else {
-      setActiveTab("tab2");
+    else { // 만약 지갑이 있다면
+      // (추가 예정) 핀번호를 확인하고
+      setActiveTab("tab2"); // 탭2로 전환
     }
   };
 
   const SecondTabModal = () => {
     return (
       <Modal
-        // keepMounted
         open={open}
         onClose={handleClose}
         disableAutoFocus={true}
-        // aria-labelledby="keep-mounted-modal-title"
-        // aria-describedby="keep-mounted-modal-description"
       >
         <Box className="WalletModalBox">
         <div className="WalletModalTitleContainer">

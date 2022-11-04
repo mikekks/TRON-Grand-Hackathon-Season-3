@@ -53,12 +53,21 @@ const Wallet01Create = ({ choosePage }) => {
         setCreated(!created);
     }
 
-    function ConfirmComplete(){
+    function ConfirmComplete(){ // 핀번호 확인 입력이 끝나면
         console.log("Confirm complete");
         PinCreated(confirmvalues);
-        console.log(confirmvalues);
+        console.log(valuess);
+        console.log(confirmvalues); // 알아봐야 할 것1. 보기에 valuess와 confirmvalues는 같은데 왜 다르다고 나올까?
         console.log(pinNumber);
-        choosePage("page2_2");
+        let tempVal = valuess.join("");
+        let tempCon = confirmvalues.join("");
+        if(tempVal==tempCon) { // 입력 핀과 확인 핀이 같으면
+            choosePage("page2_2"); // 니모닉 페이지로
+        } else { // 다르면
+            setValues(['', '', '', '']);
+            setConfirmValues(['', '', '', '']);
+            setCreated(!created); // 다시 입력
+        }
     }
 
     useEffect(() => {
