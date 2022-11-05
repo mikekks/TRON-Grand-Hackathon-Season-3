@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import useWalletStore from "../../store/WalletStore";
 import usePinStore from "../../store/PinStore";
+import TronWeb from "tronweb"
+
 {/*
 ==============================
 (1031)Wallet Page에서 세번째 컴포넌트 페이지인 니모닉 컴포넌트입니다.
@@ -22,9 +24,24 @@ const Wallet02Mnemonic = ({ choosePage }) => {
     const { WalletCreated } = useWalletStore(state => state); // 지갑이 만들어졌는지에 대한 여부 상태
     const { pinNumber } = usePinStore(state => state); // 핀넘버 상태(상태에 대한 문제가 있어 해결중)
 
+    // TronWeb instance 
+    // Network : shasta tron testnet
+    // headers : tron-pro-api-key
+    // privateKey : your privateKey
+    const tronWeb = new TronWeb({
+        fullHost: 'https://api.shasta.trongrid.io',
+        headers: { 
+            // header 안에 특정한 값이 있으면 cors error가 일어남 simple request 이어야함
+            //"TRON-PRO-API-KEY": '',
+        },
+        privateKey: ''
+    })
+
     useEffect(() => {
-        setMnemonic(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']); // esLint 에러를 해결하기 위해 단순히 추가한 코드, 출시 시에는 지워야 함
-        console.log(mnemonic);
+        const account = tronWeb.createRandom({path: "m/44'/195'/0'/0/0", extraEntropy: '', locale: 'en'});
+        let phrase = account.mnemonic.phrase.split(" ");
+        setMnemonic(phrase); // esLint 에러를 해결하기 위해 단순히 추가한 코드, 출시 시에는 지워야 함
+        // console.log(mnemonic);
     }, []);
 
     const CompleteWalletCreate = () => { // 지갑 생성이 완료되면
