@@ -5,6 +5,7 @@ import Col from 'react-bootstrap/Col';
 import { PinInput } from 'react-input-pin-code';
 
 import usePinStore from "../../store/PinStore";
+import WalletPinComponent from "./WalletComponents/WalletPinComponent";
 
 {/*
 ==============================
@@ -18,61 +19,35 @@ const Wallet01Create = ({ choosePage }) => {
     // created == false 인 경우, 지갑 생성을 위한 정보 입력 UI 표시
     // created == true 인 경우, 지갑 생성 완료 UI 표시
     const [created, setCreated] = useState(false);
-    const [valuess, setValues] = useState(['', '', '', '']);
-    const [confirmvalues, setConfirmValues] = useState(['', '', '', '']);
+    const [pinvalue, setPinvalue] = useState(['', '', '', '']);
+    const [confirmpinvalue, setConfirmpinvalue] = useState(['', '', '', '']);
 
-    const { pinNumber, PinCreated } = usePinStore(state => state);
-    
-    let cnt=0;
-    function ValueSetting(x){
-        let temp = valuess;
-        if(cnt>=0 && cnt<=3) {
-            if(cnt>=0) {
-                if(cnt>0 && x=='<') {
-                    temp[cnt-1]='';
-                    cnt--;
-                }
-                else if(cnt==0 && x=='<'){
-                    temp[0]='';
-                    cnt=0;
-                }
-                else {
-                    temp[cnt]=x;
-                    cnt++;
-                }
-            }
-        }
-        console.log(x);
-        console.log(cnt);
-        console.log(temp);
-        setValues(temp);
-    }
-
-    function InputComplete(){
-        console.log("complete");
+    const handleSetPinValue = (val) => {
+        setPinvalue(val);
         setCreated(!created);
     }
 
-    function ConfirmComplete(){ // 핀번호 확인 입력이 끝나면
-        console.log("Confirm complete");
-        PinCreated(confirmvalues);
-        console.log(valuess);
-        console.log(confirmvalues); // 알아봐야 할 것1. 보기에 valuess와 confirmvalues는 같은데 왜 다르다고 나올까?
-        console.log(pinNumber);
-        let tempVal = valuess.join("");
-        let tempCon = confirmvalues.join("");
-        if(tempVal==tempCon) { // 입력 핀과 확인 핀이 같으면
-            choosePage("page2_2"); // 니모닉 페이지로
-        } else { // 다르면
-            setValues(['', '', '', '']);
-            setConfirmValues(['', '', '', '']);
-            setCreated(!created); // 다시 입력
-        }
+    const handleConfirmPinValue = (val) => {
+        setConfirmpinvalue(val);
     }
 
     useEffect(() => {
-        console.log("Values changed");
-    },[valuess]);
+        if(confirmpinvalue[0]!=''){
+            comparePins();
+        }
+    },[confirmpinvalue]);
+
+    const comparePins = () => {
+        let tempVal = pinvalue.join("");
+        let tempCon = confirmpinvalue.join("");
+        if(tempVal==tempCon) { // 입력 핀과 확인 핀이 같으면
+            choosePage("page2_2"); // 니모닉 페이지로
+        } else { // 다르면
+            setPinvalue(['', '', '', '']);
+            setConfirmpinvalue(['', '', '', '']);
+            setCreated(!created); // 다시 입력
+        }
+    }
 
     return (
         <div>
@@ -80,103 +55,20 @@ const Wallet01Create = ({ choosePage }) => {
                 {/* 만약 지갑 생성이 아직 되지 않았다면: 지갑 생성을 위한 정보를 입력한다. */}
                 {!created ?
                     <>
-                        <br />
                         <Row>
                             <Col>
-                            <span>Set your PIN number</span>
+                                <WalletPinComponent sentence="Set your PIN number" pinvalue={handleSetPinValue} />
                             </Col>
-                        </Row>
-                        <Row>
-                            <Col>
-                                <div style={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom: "40px" }}>
-                                    <PinInput
-                                        values={valuess}
-                                        onChange={(value, index, valuess) => setValues(valuess)}
-                                        mask={true}
-                                        placeholder=""
-                                        size="lg"
-                                        borderColor="rgb(255,255,255)"
-                                        style={{ width: "50px" }}
-                                        onComplete={() => InputComplete()}
-                                        autoFocus={true}
-                                    />
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col><button className="NumberButtom" onClick={() => ValueSetting('1')}>1</button></Col>
-                            <Col><button className="NumberButtom">2</button></Col>
-                            <Col><button className="NumberButtom">3</button></Col>
-                        </Row>
-                        <br />
-                        <Row>
-                            <Col><button className="NumberButtom">4</button></Col>
-                            <Col><button className="NumberButtom">5</button></Col>
-                            <Col><button className="NumberButtom">6</button></Col>
-                        </Row>
-                        <br />
-                        <Row>
-                            <Col><button className="NumberButtom">7</button></Col>
-                            <Col><button className="NumberButtom">8</button></Col>
-                            <Col><button className="NumberButtom">9</button></Col>
-                        </Row>
-                        <br />
-                        <Row>
-                            <Col></Col>
-                            <Col><button className="NumberButtom">0</button></Col>
-                            <Col><button className="NumberButtom" onClick={() => ValueSetting('<')}>&lt;</button></Col>
                         </Row>
                     </>
                     // 만약 지갑 생성이 완료되었다면: 지갑 생성 완료 UI를 표시한다.
                     :
                     <>
-                        <br />
                         <Row>
                             <Col>
-                            <span>Confirm your PIN number</span>
+                                <WalletPinComponent sentence="Confirm your PIN number" pinvalue={handleConfirmPinValue} />
                             </Col>
                         </Row>
-                        <Row>
-                            <Col>
-                                <div style={{ display: "flex", justifyContent: "center", marginTop: "30px", marginBottom: "40px" }}>
-                                    <PinInput
-                                        values={confirmvalues}
-                                        onChange={(value, index, confirmvalues) => setConfirmValues(confirmvalues)}
-                                        mask={true}
-                                        placeholder=""
-                                        size="lg"
-                                        borderColor="rgb(255,255,255)"
-                                        style={{ width: "50px" }}
-                                        onComplete={() => ConfirmComplete()}
-                                        autoFocus={true}
-                                    />
-                                </div>
-                            </Col>
-                        </Row>
-                        <Row>
-                            <Col><button className="NumberButtom" onClick={() => ValueSetting('1')}>1</button></Col>
-                            <Col><button className="NumberButtom">2</button></Col>
-                            <Col><button className="NumberButtom">3</button></Col>
-                        </Row>
-                        <br />
-                        <Row>
-                            <Col><button className="NumberButtom">4</button></Col>
-                            <Col><button className="NumberButtom">5</button></Col>
-                            <Col><button className="NumberButtom">6</button></Col>
-                        </Row>
-                        <br />
-                        <Row>
-                            <Col><button className="NumberButtom">7</button></Col>
-                            <Col><button className="NumberButtom">8</button></Col>
-                            <Col><button className="NumberButtom">9</button></Col>
-                        </Row>
-                        <br />
-                        <Row>
-                            <Col></Col>
-                            <Col><button className="NumberButtom">0</button></Col>
-                            <Col><button className="NumberButtom" onClick={() => ValueSetting('<')}>&lt;</button></Col>
-                        </Row>
-                        <br />
                     </>
                 }
             </Container>

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import FirstTab from "./Wallet000TabComponents/Wallet001FirstTab";
-import SecondTab from "./Wallet000TabComponents/Wallet002SecondTab";
+import FirstTab from "./Wallet000TabComponents/Wallet00FirstTab";
+import SecondTab from "./Wallet000TabComponents/Wallet00SecondTab";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 

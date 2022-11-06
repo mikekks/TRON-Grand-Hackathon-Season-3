@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useRef } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,18 +17,12 @@ const Wallet02Mnemonic = ({ choosePage }) => {
     // checked == false 인 경우, 니모닉 보기 UI 표시
     // checked == true 인 경우, 니모닉 검사 UI 표시
     const [checked, setChecked] = useState(false);
-    const [mnemonic, setMnemonic] = useState(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
+    const mnemonic = useRef(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
 
     const { WalletCreated } = useWalletStore(state => state); // 지갑이 만들어졌는지에 대한 여부 상태
     const { pinNumber } = usePinStore(state => state); // 핀넘버 상태(상태에 대한 문제가 있어 해결중)
 
-    useEffect(() => {
-        setMnemonic(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']); // esLint 에러를 해결하기 위해 단순히 추가한 코드, 출시 시에는 지워야 함
-        console.log(mnemonic);
-    }, []);
-
     const CompleteWalletCreate = () => { // 지갑 생성이 완료되면
-        console.log(pinNumber);
         WalletCreated();
         choosePage("page"); // 지갑 페이지로 전환
     }
@@ -39,7 +33,7 @@ const Wallet02Mnemonic = ({ choosePage }) => {
         if (!checked) {
             return (
                 // 니모닉 확인 버튼을 누르면 니모닉 검사 UI로 변경된다.
-                <button disabled onClick={() => setChecked(true)} style={{ maxWidth: "300px", width: "100%", height: "50px", borderRadius: "25px", border: "none", backgroundColor: "#ffffff", boxShadow: "0px 5px 0px #CB9C00" }}>I have stored the phrase safely.</button>
+                <button disabled style={{ maxWidth: "300px", width: "100%", height: "50px", borderRadius: "25px", border: "none", backgroundColor: "#ffffff", boxShadow: "0px 5px 0px #CB9C00" }}>I have stored the phrase safely.</button>
             )
         }
         // 만약 니모닉 보기가 이루어졌다면
@@ -75,7 +69,6 @@ const Wallet02Mnemonic = ({ choosePage }) => {
                     <Col>
                         <div style={{ display: "flex", justifyContent: "center" }}>
                             <p style={{ fontSize: "24px" }}>Mnemonic</p>
-
                         </div>
                     </Col>
                 </Row>
@@ -119,7 +112,7 @@ const Wallet02Mnemonic = ({ choosePage }) => {
                                     type="checkbox"
                                     id="inline-checkbox-1"
                                     style={{ fontSize: "12px", color: "#666666" }}
-                                    checked={checked}
+                                    checked={checked.current}
                                     onChange={() => setChecked(!checked)}
                                 />
                             </Form>
