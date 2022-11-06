@@ -3,14 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import useWalletStore from "../../store/WalletStore";
-import usePinStore from "../../store/PinStore";
+import useWalletStore from "../../../store/WalletStore";
+import usePinStore from "../../../store/PinStore";
 {/*
 ==============================
 (1031)Wallet Page에서 세번째 컴포넌트 페이지인 니모닉 컴포넌트입니다.
 ==============================
 */}
-const Wallet02Mnemonic = ({ choosePage }) => {
+const WalletMnemonic = ({ choosePage }) => {
 
     // 이 컴포넌트에서는 '니모닉 보기 UI(1)', '니모닉 검사(2)'의 두 UI를 표시합니다.
     // checked state를 통해 표시 조건에 따라 각 UI를 표시합니다.
@@ -131,4 +131,4 @@ const Wallet02Mnemonic = ({ choosePage }) => {
     )
 }
 
-export default Wallet02Mnemonic;
+export default WalletMnemonic;

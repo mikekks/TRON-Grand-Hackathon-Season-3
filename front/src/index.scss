@@ -1,17 +1,16 @@
-@import './styles/MainPageStyle.scss';
-@import './styles/WalletPageStyle.scss';
+@import './theme/GlobalStyles/BottomNavbarStyle.scss';
 
-@import './styles/components/BottomNavbarStyle.scss';
-@import './styles/components/WalletSwitchButton.scss';
+@import './theme/PageStyles/MainPageStyle.scss';
 
-@import './styles/components/WalletMakeStyle.scss';
-@import './styles/components/WalletTabsStyle.scss';
+@import './theme/PageStyles/WalletPageStyle.scss';
+@import './theme/ComponentStyles/WalletStyles/Wallet00TabStyle.scss';
+@import './theme/ComponentStyles/WalletStyles/Wallet01CreateStyle.scss';
+@import './theme/ComponentStyles/WalletStyles/Wallet02Mnemonic.scss';
+@import './theme/ComponentStyles/WalletStyles/WalletMakeStyle.scss';
+@import './theme/ComponentStyles/WalletStyles/WalletPinComponentStyle.scss';
+@import './theme/ComponentStyles/WalletStyles/WalletSwitchButton.scss';
+@import './theme/ComponentStyles/WalletStyles/WalletTabsStyle.scss';
 
-@import './styles/components/WalletPageComponents/Wallet00TabStyle.scss';
-@import './styles/components/WalletPageComponents/Wallet01CreateStyle.scss';
-@import './styles/components/WalletPageComponents/Wallet02Mnemonic.scss';
-
-@import './styles/components/WalletPinComponentStyle.scss';
 
 body {
   margin: 0;

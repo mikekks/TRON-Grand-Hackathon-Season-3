@@ -3,7 +3,7 @@ import React from 'react';
 import MainPage from './pages/MainPage';
 import WalletPage from './pages/WalletPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import BottomNavbar from './components/BottomNavbar';
+import BottomNavbar from './components/layouts/GlobalLayouts/BottomNavbar';
 
 {/*
 ==============================
