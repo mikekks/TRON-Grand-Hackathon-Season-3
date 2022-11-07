@@ -35,7 +35,7 @@ const WalletMnemonic = ({ choosePage }) => {
             //"TRON-PRO-API-KEY": '',
         },
         privateKey: ''
-    });
+    })
 
     useEffect(() => {
         const account = tronWeb.createRandom({path: "m/44'/195'/0'/0/0", extraEntropy: '', locale: 'en'});
