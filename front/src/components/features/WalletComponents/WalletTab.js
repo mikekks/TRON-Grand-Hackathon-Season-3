@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import FirstTab from "./Wallet000TabComponents/Wallet001FirstTab";
-import SecondTab from "./Wallet000TabComponents/Wallet002SecondTab";
+import WalletFirstTab from "../../layouts/WalletLayouts/WalletFirstTab";
+import WalletSecondTab from "../../layouts/WalletLayouts/WalletSecondTab";
+// import SecondTab from "../../WalletComponents/Wallet000TabComponents/Wallet00SecondTab";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 
-import useWalletStore from "../../store/WalletStore";
+import useWalletStore from "../../../store/WalletStore";
 // import usePinStore from "../../store/PinStore";
 
 {/*
@@ -12,7 +13,7 @@ import useWalletStore from "../../store/WalletStore";
 (1031)Wallet Page에서 네번째 컴포넌트 페이지인 지갑 탭 컴포넌트입니다.
 ==============================
 */}
-const Wallet00Tab = ({ choosePage }) => {
+const WalletTab = ({ choosePage }) => {
 
   // 이 컴포넌트에서는 'SPENDING Tab(1)', 'WALLET Tab(2)'의 두 UI를 표시합니다.
   // activeTab state를 통해 표시 조건에 따라 각 UI를 표시합니다.
@@ -85,11 +86,11 @@ const Wallet00Tab = ({ choosePage }) => {
         </ul>
 
         <div className="outlet">
-          {activeTab === "tab1" ? <FirstTab /> : <SecondTab />}
+          {activeTab === "tab1" ? <WalletFirstTab /> : <WalletSecondTab />}
         </div>
       </div>
       <SecondTabModal />
     </>
   );
 };
-export default Wallet00Tab;
+export default WalletTab;

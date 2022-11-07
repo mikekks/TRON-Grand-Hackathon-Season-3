@@ -23,7 +23,7 @@ let address="0xec5656a2fb4CF5A735dE5680361E0292D0274B6c";
 */}
 
 // WALLET Tab
-const SecondTab = () => {
+const WalletSecondTab = () => {
     return (
         <div className="SecondTab">
             <div className="Wallet">
@@ -101,4 +101,4 @@ const SecondTab = () => {
         </div >
     );
 };
-export default SecondTab;
+export default WalletSecondTab;

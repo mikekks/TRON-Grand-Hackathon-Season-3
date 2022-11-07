@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import Wallet00Tab from "../components/WalletPageComponents/Wallet00Tab";
-import Wallet01Create from "../components/WalletPageComponents/Wallet01Create";
-import Wallet02Mnemonic from "../components/WalletPageComponents/Wallet02Mnemonic";
+import WalletTab from "../components/features/WalletComponents/WalletTab";
+import WalletCreate from "../components/features/WalletComponents/WalletCreate";
+import WalletMnemonic from "../components/features/WalletComponents/WalletMnemonic";
+// import WalletCreate from "../components/WalletPageComponents/Wallet01Create";
+// import WalletMnemonic from "../components/WalletPageComponents/Wallet02Mnemonic";
 
 
 {/*
@@ -29,11 +31,11 @@ const WalletPage = () => {
     const WalletPages = () => {
         switch(page) {
             case "page":
-                return (<Wallet00Tab choosePage = {choosePage}/>);
+                return (<WalletTab choosePage = {choosePage}/>);
             case "page2_1":
-                return (<Wallet01Create choosePage = {choosePage}/>);
+                return (<WalletCreate choosePage = {choosePage}/>);
             case "page2_2":
-                return (<Wallet02Mnemonic choosePage = {choosePage}/>);
+                return (<WalletMnemonic choosePage = {choosePage}/>);
             // case "page2_3":
             // case 4:
             //     return (<Wallet04Tab />);

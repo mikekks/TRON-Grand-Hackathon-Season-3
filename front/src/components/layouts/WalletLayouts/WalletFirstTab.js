@@ -9,7 +9,7 @@ import { FaEthereum } from "react-icons/fa";
 ==============================
 */}
 // SPENDING Tab
-const FirstTab = () => {
+const WalletFirstTab = () => {
     return (
         <div className="FirstTab">
 
@@ -39,4 +39,4 @@ const FirstTab = () => {
         </div>
     );
 };
-export default FirstTab;
+export default WalletFirstTab;
