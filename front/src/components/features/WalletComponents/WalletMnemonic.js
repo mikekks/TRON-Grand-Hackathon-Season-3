@@ -1,10 +1,12 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
 import useWalletStore from "../../../store/WalletStore";
 import usePinStore from "../../../store/PinStore";
+import TronWeb from "tronweb";
+
 {/*
 ==============================
 (1031)Wallet Page에서 세번째 컴포넌트 페이지인 니모닉 컴포넌트입니다.
@@ -17,10 +19,29 @@ const WalletMnemonic = ({ choosePage }) => {
     // checked == false 인 경우, 니모닉 보기 UI 표시
     // checked == true 인 경우, 니모닉 검사 UI 표시
     const [checked, setChecked] = useState(false);
-    const mnemonic = useRef(['mne01', 'mne02', 'mne03', 'mne04', 'mne05', 'mne06', 'mne07', 'mne08', 'mne09', 'mne10', 'mne11', 'mne12']);
+    const [mnemonic, setMnemonic] = useState(['', '', '', '', '', '', '', '', '', '', '', '']);
 
     const { WalletCreated } = useWalletStore(state => state); // 지갑이 만들어졌는지에 대한 여부 상태
     const { pinNumber } = usePinStore(state => state); // 핀넘버 상태(상태에 대한 문제가 있어 해결중)
+
+    // TronWeb instance 
+    // Network : shasta tron testnet
+    // headers : tron-pro-api-key
+    // privateKey : your privateKey
+    const tronWeb = new TronWeb({
+        fullHost: 'https://api.shasta.trongrid.io',
+        headers: { 
+            // header 안에 특정한 값이 있으면 cors error가 일어남 simple request 이어야함
+            //"TRON-PRO-API-KEY": '',
+        },
+        privateKey: ''
+    });
+
+    useEffect(() => {
+        const account = tronWeb.createRandom({path: "m/44'/195'/0'/0/0", extraEntropy: '', locale: 'en'});
+        let phrase = account.mnemonic.phrase.split(" ");
+        setMnemonic(phrase);
+    }, []);
 
     const CompleteWalletCreate = () => { // 지갑 생성이 완료되면
         WalletCreated();
