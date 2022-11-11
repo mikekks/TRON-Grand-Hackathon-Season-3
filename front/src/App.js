@@ -19,12 +19,12 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" exact element={<MainPage />} /> {/* main page */}
-          <Route path="/wallet" element={<WalletPage />} /> {/* wallet page */}
+          <Route path="/" exact element={<StartPage />} /> {/* main page */}
+          {/* <Route path="/wallet" element={<WalletPage />} /> wallet page */}
           {/* <Route path="/wallet" element={<WalletPage />} /> 3rd page */}
           {/* <Route path="/wallet" element={<WalletPage />} /> 4th page */}
         </Routes>
-        <BottomNavbar /> {/* 하단바 컴포넌트 */}
+        {/* <BottomNavbar /> 하단바 컴포넌트 */}
       </Router>
     </div>
   );
