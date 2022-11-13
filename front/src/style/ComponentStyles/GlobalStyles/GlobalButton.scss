@@ -1,0 +1,24 @@
+.ButtonClick {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ButtonClick button{
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 5px 0px #CB9C00;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ButtonClick button:active {
+    border-radius: 10px;
+    border: none;
+    background-color: #CCCCCC;
+    box-shadow: 0px 1px 0px #CB9C00;
+    transform: translate(0, 5px);
+    // transform: translate3d(-100px, 5px, 0px);
+    // transform: translate(5px, 50px, 0px);
+}

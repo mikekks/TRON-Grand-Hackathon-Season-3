@@ -3,7 +3,11 @@ import { Link } from "react-router-dom";
 
 const StartButton = () => {
     return(
-        <Link to="/growing" ><button className="StartButton">START</button></Link>
+        <Link to="/growing" >
+            <div className="ButtonClick">
+                <button className="StartButton" active={true}>START</button>
+            </div>
+        </Link>
     )
 }
 

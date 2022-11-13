@@ -14,13 +14,13 @@ const Itembar = ({handleMode}) => {
 
     const PojaItem = () => {
         return(
-            <img src={Poja} style={{width:"58px"}} onClick={() => handleElement("poja")} />
+            <img src={Poja} style={{width:"58px", borderRadius:"5px"}} onClick={() => handleElement("poja")} />
         )
     }
 
     const BigMushItem = () => {
         return(
-            <img src={Mush02} style={{width:"58px"}} onClick={() => handleElement("bigmush")} />
+            <img src={Mush02} style={{width:"58px", borderRadius:"5px"}} onClick={() => handleElement("bigmush")} />
         )
     }
 
@@ -28,7 +28,6 @@ const Itembar = ({handleMode}) => {
         <div className="Itembar">
             <div className="ItemElement"><PojaItem /></div>
             <div className="ItemElement"><BigMushItem /></div>
-            <div className="ItemElement"></div>
             <div className="ItemElement"></div>
             <div className="ItemElement"></div>
         </div>

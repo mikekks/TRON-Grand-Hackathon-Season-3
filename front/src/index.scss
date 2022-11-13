@@ -3,6 +3,7 @@
 @import './style/ComponentStyles/GlobalStyles/BottomNavbarStyle.scss';
 @import './style/ComponentStyles/GlobalStyles/GoBackButtonStyle.scss';
 @import './style/ComponentStyles/GlobalStyles/ItembarStyle.scss';
+@import './style/ComponentStyles/GlobalStyles/GlobalButton.scss';
 
 // ComponentStyles > StartStyles
 @import './style/ComponentStyles/StartStyles/StartTitleStyle.scss';
@@ -20,6 +21,10 @@
 
 // ComponentStyles > GrowingStyles
 @import './style/ComponentStyles/GrowingStyles/TreeStyle.scss';
+
+html {
+  background-color: #DDDDDD;
+}
 
 body {
   margin: 0;
