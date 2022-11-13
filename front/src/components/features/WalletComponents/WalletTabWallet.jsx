@@ -12,7 +12,7 @@ import { CgArrowsExchangeAlt } from "react-icons/cg";
 */}
 
 // 임시 address
-let address="0xec5656a2fb4CF5A735dE5680361E0292D0274B6c";
+let address = "0xec5656a2fb4CF5A735dE5680361E0292D0274B6c";
 
 // 이 탭에서 필요한 정보
 {/*
@@ -28,41 +28,41 @@ const WalletTabWallet = () => {
         <div className="SecondTab">
             <div className="Wallet">
                 <p className="WalletAllBalance">1.594 ETH</p> {/* 코인(토큰) 보유량 */}
-                <div className="WalletAccountContainer" onClick={() => {navigator.clipboard.writeText("0xab...1234")}}>
+                <div className="WalletAccountContainer" onClick={() => { navigator.clipboard.writeText("0xab...1234") }}>
                     {/* address 표시란 */}
-                    <span>{address.substr(0,4)}...{address.substr(38,41)}</span><span className="WalletAccountCopy"><FaCopy /></span>
+                    <span>{address.substr(0, 4)}...{address.substr(38, 41)}</span><span className="WalletAccountCopy"><FaCopy /></span>
                 </div>
             </div>
-            <br/>
-            <div style={{marginLeft: "30px", marginRight: "30px"}}>
+            <br />
+            <div style={{ marginLeft: "30px", marginRight: "30px" }}>
                 <Container>
                     <Row>
                         <Col>
                             {/* RECEIVE 버튼 */}
                             <div className="SecondTabbtnContainer">
-                                <button className="SecondTabbtn"><MdOutlineFileDownload size="24px"/></button>
-                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight:"bold" }}>RECEIVE</div>
+                                <button className="SecondTabbtn"><MdOutlineFileDownload size="24px" /></button>
+                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight: "bold" }}>RECEIVE</div>
                             </div>
                         </Col>
                         <Col>
                             {/* SEND 버튼 */}
                             <div className="SecondTabbtnContainer">
-                                <button className="SecondTabbtn"><MdNorthEast size="24px"/></button>
-                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight:"bold"  }}>SEND</div>
+                                <button className="SecondTabbtn"><MdNorthEast size="24px" /></button>
+                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight: "bold" }}>SEND</div>
                             </div>
                         </Col>
                         <Col>
                             {/* TRADE 버튼 */}
                             <div className="SecondTabbtnContainer">
-                                <button className="SecondTabbtn"><CgArrowsExchangeAlt size="24px"/></button>
-                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight:"bold"  }}>TRADE</div>
+                                <button className="SecondTabbtn"><CgArrowsExchangeAlt size="24px" /></button>
+                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight: "bold" }}>TRADE</div>
                             </div>
                         </Col>
                         <Col>
                             {/* SETTINGS 버튼 */}
                             <div className="SecondTabbtnContainer">
-                                <button className="SecondTabbtn"><MdOutlineSettings size="24px"/></button>
-                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight:"bold"  }}>SETTINGS</div>
+                                <button className="SecondTabbtn"><MdOutlineSettings size="24px" /></button>
+                                <div style={{ color: "black", marginTop: "5px", fontSize: "5px", fontWeight: "bold" }}>SETTINGS</div>
                             </div>
                         </Col>
                     </Row>
@@ -95,6 +95,52 @@ const WalletTabWallet = () => {
                         {/* NFT 아이콘 + NFT 이름 + NFT 번호 */}
                         <Col><FaEthereum style={{ marginRight: "10px" }} />NFT <span style={{ fontSize: "8px", color: "#999999" }}>#123456</span></Col>
                         <Col className="WalletBalance">$123</Col> {/* 가격? 가치? */}
+                    </Row>
+                </Container>
+            </div>
+
+            <hr className="WalletBodyhr" />
+
+            {/* Item Inventory */}
+            <div className="SpendingAccount">
+                <p className="SpendingAccountTitle">Inventory</p>
+                <Container>
+                    <Row>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Mushroom Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    poja Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Image
+                                </div>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </div>

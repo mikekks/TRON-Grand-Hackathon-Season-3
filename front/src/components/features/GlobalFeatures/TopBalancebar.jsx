@@ -23,7 +23,7 @@ const TopBalancebar = () => {
                 <div>{valtwo}</div>
             </div>
             <div className="TopBalanceBarIcon">
-                <Link to="/wallet" >
+                <Link to="/wallet" className="WalletIcon">
                     <MdOutlineAccountBalanceWallet size={24} />
                 </Link>
             </div>

@@ -1,13 +1,12 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { CiVault } from "react-icons/ci";
-import { TbMushroom } from "react-icons/tb";
+import { NavLink } from "react-router-dom";
+import { GiMushroomGills, GiPiggyBank } from "react-icons/gi";
 
 const BottomNavbar = () => {
     return(
         <div className="BottomNavbar">
-            <Link to="/growing" ><TbMushroom size={24} /></Link>
-            <Link to="/staking" ><CiVault size={24} /></Link>
+            <NavLink to="/growing" className={({ isActive }) => (isActive ? "NavActive" : "NavDeactive")} ><GiMushroomGills size={24} /></NavLink>
+            <NavLink to="/staking" className={({ isActive }) => (isActive ? "NavActive" : "NavDeactive")} ><GiPiggyBank size={24} /></NavLink>
         </div>
     )
 }

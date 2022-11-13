@@ -1,0 +1,39 @@
+.InventoryCol {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.InventoryContainer {
+    background:white;
+    width: 33vw;
+    height: 33vw;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 5px 0px #CB9C00;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    transition: all 0.2s ease;
+}
+
+.InventoryContainer:active {
+    background:white;
+    width: 33vw;
+    height: 33vw;
+    margin-bottom: 1rem;
+    border-radius: 15px;
+    box-shadow: 0px 1px 0px #CB9C00;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: black;
+    transform: translateY(5px);
+}
+
+.InventoryElement {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}

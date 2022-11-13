@@ -36,19 +36,49 @@ const WalletTabSpending = () => {
 
             {/* Transfer button */}
             <button className="FirstTabTransferbtn">TRANSFER</button>
+
+            <hr className="WalletBodyhr" />
+
+            {/* Item Inventory */}
             <div className="SpendingAccount">
-                <p className="SpendingAccountTitle">Spending Account</p>
+                <p className="SpendingAccountTitle">Inventory</p>
                 <Container>
                     <Row>
-                        <Col>
-                            <div className="ItemContainer">
-                                dasdfasdfasdfasdf
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Mushroom Image
+                                </div>
                             </div>
                         </Col>
-                        <Col>dasdfasdfasdfasdf</Col>
-                        <Col>dasdfasdfasdfasdf</Col>
-                        <Col>dasdfasdfasdfasdf</Col>
-                        <Col>dasdfasdfasdfasdf</Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    poja Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Image
+                                </div>
+                            </div>
+                        </Col>
+                        <Col className="InventoryCol" style={{ maxWidth: "50%" }}>
+                            <div className="InventoryContainer">
+                                <div className="InventoryElement">
+                                    Image
+                                </div>
+                            </div>
+                        </Col>
                     </Row>
                 </Container>
             </div>

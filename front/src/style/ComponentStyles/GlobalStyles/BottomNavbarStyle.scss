@@ -9,7 +9,37 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: white;
     border-radius: 999px;
-    border: 1px solid black;
+    box-shadow: 0px 5px 0px #CB9C00;
+    background-color: #C6D0D0;
+}
+
+.NavActive {
+    color: black;
+    background-color: white;
+    height: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+    border-radius: 999px;
+}
+
+.NavActive:hover {
+    color: black;
+}
+
+.NavDeactive {
+    color: #999999;
+    background-color: #C6D0D0;
+    height: 50px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    width: 50%;
+    border-radius: 999px;
+}
+
+.NavDeactive:hover {
+    color: #666666;
 }
