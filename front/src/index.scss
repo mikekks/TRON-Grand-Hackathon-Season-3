@@ -1,16 +1,25 @@
-@import './theme/GlobalStyles/BottomNavbarStyle.scss';
+// ComponentStyles > GlobalStyles
+@import './style/ComponentStyles/GlobalStyles/TopBalancebarStyles.scss';
+@import './style/ComponentStyles/GlobalStyles/BottomNavbarStyle.scss';
+@import './style/ComponentStyles/GlobalStyles/GoBackButtonStyle.scss';
+@import './style/ComponentStyles/GlobalStyles/ItembarStyle.scss';
 
-@import './theme/PageStyles/MainPageStyle.scss';
+// ComponentStyles > StartStyles
+@import './style/ComponentStyles/StartStyles/StartTitleStyle.scss';
+@import './style/ComponentStyles/StartStyles/StartImageStyle.scss';
+@import './style/ComponentStyles/StartStyles/StartButtonStyle.scss';
 
-@import './theme/PageStyles/WalletPageStyle.scss';
-@import './theme/ComponentStyles/WalletStyles/Wallet00TabStyle.scss';
-@import './theme/ComponentStyles/WalletStyles/Wallet01CreateStyle.scss';
-@import './theme/ComponentStyles/WalletStyles/Wallet02Mnemonic.scss';
-@import './theme/ComponentStyles/WalletStyles/WalletMakeStyle.scss';
-@import './theme/ComponentStyles/WalletStyles/WalletPinComponentStyle.scss';
-@import './theme/ComponentStyles/WalletStyles/WalletSwitchButton.scss';
-@import './theme/ComponentStyles/WalletStyles/WalletTabsStyle.scss';
+// ComponentStyles > WalletStyles
+@import './style/ComponentStyles/WalletStyles/Wallet00TabStyle.scss';
+@import './style/ComponentStyles/WalletStyles/Wallet01CreateStyle.scss';
+@import './style/ComponentStyles/WalletStyles/Wallet02Mnemonic.scss';
+@import './style/ComponentStyles/WalletStyles/WalletMakeStyle.scss';
+@import './style/ComponentStyles/WalletStyles/WalletPinComponentStyle.scss';
+@import './style/ComponentStyles/WalletStyles/WalletSwitchButton.scss';
+@import './style/ComponentStyles/WalletStyles/WalletTabStyle.scss';
 
+// ComponentStyles > GrowingStyles
+@import './style/ComponentStyles/GrowingStyles/TreeStyle.scss';
 
 body {
   margin: 0;

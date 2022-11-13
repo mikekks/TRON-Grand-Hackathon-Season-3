@@ -1,0 +1,229 @@
+.WalletTabs {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    // background: #EDBE00;
+    color: white;
+    margin-top: 30px;
+}
+
+ul.nav {
+    width: 60%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid black;
+    background-color: #C6D0D0;
+    color: #999999;
+    border-radius: 2rem;
+    padding-left: 0px;
+    box-shadow: 0px 5px 0px #CB9C00;
+
+    @media (max-width: 768px) {
+        width: 70%;
+    }
+}
+
+ul.nav li {
+    width: 50%;
+    padding: 10px;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+    border-radius: 30px;
+}
+
+ul.nav li:nth-child(2) {
+    border-radius: 0;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-radius: 30px;
+}
+
+ul.nav li:hover {
+    background: rgba(50, 50, 50, 0.15);
+    border-radius: 30px;
+}
+
+ul.nav li.active {
+    background: #E8F0F2;
+    color: black;
+    border-radius: 30px;
+    box-shadow: 0px 5px 0px #CB9C00;
+}
+
+// =======================================
+// BELOW: SPENDING Tab style ( First Tab )
+.FirstTabTransferbtn {
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 5px 0px #CB9C00;
+    background-color: white;
+    border: 1px solid black;
+
+}
+
+.FirstTab button {
+    color: white;
+    color: black;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    
+}
+
+.FirstTab button:active {
+    background-color: #DDDDDD;
+    box-shadow: 0 1px 0px #CB9C00;
+    transform: translateY(5px);
+}
+
+.SpendingAccount {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.SpendingAccountTitle {
+    margin-left: 10px;
+    color: black;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.SpendingAccountContainer {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 5px 0px #CB9C00;
+    margin-bottom: 30px;
+    border: 1px solid black;
+
+}
+
+.SpendingAccounthr {
+    margin: 10px 0;
+    color: #CB9C00;
+}
+
+.SpendingAccountRow {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.SpendingAccountBalance {
+    text-align: right;
+}
+
+// ======================================
+// BELOW: WALLET Tab style ( Second Tab )
+.Wallet {
+    font-size: 16px;
+    text-align: left;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.WalletAllBalance {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color:black
+}
+
+.WalletContainer {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    box-shadow: 0px 5px 0px #CB9C00;
+    margin-bottom: 30px;
+    border: 1px solid black;
+
+}
+
+.WalletBodyhr {
+    color: #A97A00;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Wallethr {
+    margin: 10px 0;
+    color: #CB9C00;
+}
+
+.WalletRow {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.WalletBalance {
+    text-align: right;
+}
+
+.WalletAccountContainer {
+    width: 120px;
+    height: 30px;
+    color: #999999;
+    margin: auto;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 30px;
+    box-shadow: 0px 5px 0px #CB9C00;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid black;
+
+}
+
+.WalletAccountCopy {
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: #EDBE00;
+    color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+
+}
+
+.SecondTabbtnContainer button {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    box-shadow: 0px 5px 0px #CB9C00;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border: 1px solid black;
+
+}
+
+.SecondTabbtnContainer button:active {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #CCCCCC;
+    box-shadow: 0px 1px 0px #CB9C00;
+    transform: translateY(5px);
+    border: 1px solid black;
+
+}
