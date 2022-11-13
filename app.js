@@ -5,20 +5,7 @@ const fullNode = new HttpProvider("https://nile.trongrid.io");
 const solidityNode = new HttpProvider("https://nile.trongrid.io");
 const eventServer = new HttpProvider("https://nile.trongrid.io");
 
-const ownerprivateKey = "D9598D7346741CAA2FA5A46777CD4A810BFB05A1423F8FE24A8B89F7642819C4"; // user
-const userprivateKey = "13a1675e3df35978edd1d7f2ef54b6e9b7067228c8df300b0eae2cd5cac4e942";  // owner
-const stealerprivateKey = "80c8c1032c3aeb1e020730e7db437d88e844af333f7f8b7553df1eeec42430df"; // stealer
 
-const ownerAddress = "TSafMJ7VyjPioafQiCL8RywEH31rXHRLRL";  //testsong
-const userAddress = "TFJ1EYjdkxX6ASjPhP45tNvDS29qsQn812"; // wallet1
-const stealerAddress = "THeTAEcaL2z7RMSQWfr4MYTtb3xEmGkhbQ"; // stealer
-
-const tronWeb_owner = new TronWeb(fullNode, solidityNode, eventServer, ownerprivateKey);  // (테스트를 위한 주석) testsong 지갑
-const tronWeb_user = new TronWeb(fullNode, solidityNode, eventServer, userprivateKey);  // (테스트를 위한 주석) Wallet1 지갑
-const tronWeb_stealer = new TronWeb(fullNode, solidityNode, eventServer, stealerprivateKey);
-
-const tokenContract = "TUYkCUBR5kr3TQ1EYEz4XxcA55Urkb9duT";// token coontract
-const stakeContract = "TY7cegcfNiPb3FrKRmd8eRioWjkoeNy2vG";  // staking contract
 
 ////////////////////////////////////////////////////////////////// 세팅을 위한 함수들
 async function j_setStakeContract() {
