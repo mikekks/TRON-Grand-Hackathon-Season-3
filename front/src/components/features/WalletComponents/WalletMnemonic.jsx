@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
-import useWalletStore from "../../../store/WalletStore";
-import usePinStore from "../../../store/PinStore";
+import useWalletStore from "../../../stores/WalletStore";
+import usePinStore from "../../../stores/PinStore";
 import TronWeb from "tronweb";
 
 {/*
@@ -83,13 +83,13 @@ const WalletMnemonic = ({ choosePage }) => {
     }
 
     return (
-        <div>
+        <div style={{backgroundColor:"#EDBE00"}}>
             <br />
             <Container>
                 <Row>
                     <Col>
                         <div style={{ display: "flex", justifyContent: "center" }}>
-                            <p style={{ fontSize: "24px" }}>Mnemonic</p>
+                            <p style={{ fontSize: "24px" }}>Mnemonics</p>
                         </div>
                     </Col>
                 </Row>
@@ -116,7 +116,7 @@ const WalletMnemonic = ({ choosePage }) => {
                 {/* 예비 공간 */}
                 <Row>
                     <Col>
-                        <div style={{ margin: "auto", maxWidth: "300px" }}>
+                        <div style={{ margin: "auto", maxWidth: "300px", display:"flex", justifyContent:"space-between" }}>
                             <button onClick={() => MnemonicCopy()} style={{ width: "100%", maxWidth: "100px", marginRight: "40px", borderRadius: "15px", backgroundColor: "white", border: "none", boxShadow: "0px 5px 0px #CB9C00" }}>Copy</button>
                             <button onClick={() => MnemonicJSON()} style={{ width: "100%", maxWidth: "100px", marginLeft: "40px", borderRadius: "15px", backgroundColor: "white", border: "none", boxShadow: "0px 5px 0px #CB9C00" }}>JSON</button>
                         </div>

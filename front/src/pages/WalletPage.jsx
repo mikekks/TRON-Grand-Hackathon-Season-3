@@ -4,6 +4,12 @@ import WalletFlow from "../components/features/WalletComponents/WalletFlow";
 
 const WalletPage = () => {
 
+    const [mode, setMode] = useState("mush");
+    
+    const handleMode = (value) => {
+        setMode(value);
+    }
+    
     return (
         <div>
             <GoBackButton />

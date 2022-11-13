@@ -51,12 +51,12 @@ const WalletPinComponent = ({ sentence, pinvalue }) => {
                         {pin.map((data, index) => {
                             if (data != '') {
                                 return (
-                                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "50px", height: "50px", backgroundColor: "white", borderRadius: "15px", marginLeft: "5px", marginRight: "5px" }}>•</div>
+                                    <div style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "50px", height: "50px", backgroundColor: "white", borderRadius: "15px", marginLeft: "5px", marginRight: "5px", boxShadow:"0px 5px 0px #CB9C00" }}>•</div>
                                 )
                             }
                             else {
                                 return (
-                                    <div style={{ width: "50px", height: "50px", backgroundColor: "white", borderRadius: "15px", marginLeft: "5px", marginRight: "5px" }}></div>
+                                    <div style={{ width: "50px", height: "50px", backgroundColor: "white", borderRadius: "15px", marginLeft: "5px", marginRight: "5px", boxShadow:"0px 5px 0px #CB9C00" }}></div>
                                 )
                             }
                         })}
@@ -65,25 +65,25 @@ const WalletPinComponent = ({ sentence, pinvalue }) => {
             </Row>
             <Row>
                 <Col><button className="NumberButtom" onClick={() => handleChange('1')}>1</button></Col>
-                <Col><button className="NumberButtom">2</button></Col>
-                <Col><button className="NumberButtom">3</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('2')}>2</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('3')}>3</button></Col>
             </Row>
             <br />
             <Row>
-                <Col><button className="NumberButtom">4</button></Col>
-                <Col><button className="NumberButtom">5</button></Col>
-                <Col><button className="NumberButtom">6</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('4')}>4</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('5')}>5</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('6')}>6</button></Col>
             </Row>
             <br />
             <Row>
-                <Col><button className="NumberButtom">7</button></Col>
-                <Col><button className="NumberButtom">8</button></Col>
-                <Col><button className="NumberButtom">9</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('7')}>7</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('8')}>8</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('9')}>9</button></Col>
             </Row>
             <br />
             <Row>
                 <Col></Col>
-                <Col><button className="NumberButtom">0</button></Col>
+                <Col><button className="NumberButtom" onClick={() => handleChange('0')}>0</button></Col>
                 <Col><button className="NumberButtom" onClick={() => handleChange('<')}>&lt;</button></Col>
             </Row>
         </>

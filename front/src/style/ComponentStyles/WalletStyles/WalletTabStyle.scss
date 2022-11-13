@@ -2,18 +2,18 @@
     width: 100%;
     height: 100%;
     min-height: 400px;
-    // background: #EDBE00;
+    background: #EDBE00;
     color: white;
     margin-top: 30px;
 }
 
 ul.nav {
-    width: 60%;
+    width: 50%;
     margin: 0 auto 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid black;
+    // border: 1px solid black;
     background-color: #C6D0D0;
     color: #999999;
     border-radius: 2rem;
@@ -21,7 +21,7 @@ ul.nav {
     box-shadow: 0px 5px 0px #CB9C00;
 
     @media (max-width: 768px) {
-        width: 70%;
+        width: 60%;
     }
 }
 
@@ -53,6 +53,7 @@ ul.nav li.active {
     background: #E8F0F2;
     color: black;
     border-radius: 30px;
+    // border: 1px solid black;
     box-shadow: 0px 5px 0px #CB9C00;
 }
 
@@ -65,12 +66,12 @@ ul.nav li.active {
     border: none;
     box-shadow: 0px 5px 0px #CB9C00;
     background-color: white;
-    border: 1px solid black;
+    margin-bottom: 2rem;
+    // border: 1px solid black;
 
 }
 
 .FirstTab button {
-    color: white;
     color: black;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -105,8 +106,7 @@ ul.nav li.active {
     padding-bottom: 15px;
     box-shadow: 0px 5px 0px #CB9C00;
     margin-bottom: 30px;
-    border: 1px solid black;
-
+    // border: 1px solid black;
 }
 
 .SpendingAccounthr {
@@ -185,8 +185,7 @@ ul.nav li.active {
     align-items: center;
     justify-content: center;
     text-align: center;
-    border: 1px solid black;
-
+    // border: 1px solid black;
 }
 
 .WalletAccountCopy {
@@ -199,8 +198,7 @@ ul.nav li.active {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid black;
-
+    // border: 1px solid black;
 }
 
 .SecondTabbtnContainer button {
@@ -212,7 +210,7 @@ ul.nav li.active {
     box-shadow: 0px 5px 0px #CB9C00;
     cursor: pointer;
     transition: all 0.2s ease;
-    border: 1px solid black;
+    // border: 1px solid black;
 
 }
 
@@ -224,6 +222,5 @@ ul.nav li.active {
     background-color: #CCCCCC;
     box-shadow: 0px 1px 0px #CB9C00;
     transform: translateY(5px);
-    border: 1px solid black;
-
+    // border: 1px solid black;
 }

@@ -1,8 +1,24 @@
-.inputStyle{
-    width: 3rem !important;
-    height: 3rem;
-    margin: 0 1rem;
-    font-size: 2rem;
-    border-radius: 4px;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+.NumberButtom {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    // border-color: black;
+    border: none;
+    background-color: #FFFFFF;
+    // background-color: #EDBE00;
+    box-shadow: 0px 5px 0px #CB9C00;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.NumberButtom:active {
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+    // border-color: black;
+    border: none;
+    background-color: #EEEEEE;
+    // background-color: #EDBE00;
+    box-shadow: 0px 1px 0px #CB9C00;
+    transform: translateY(5px);
 }

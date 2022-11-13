@@ -11,19 +11,19 @@
 @import './style/ComponentStyles/StartStyles/StartButtonStyle.scss';
 
 // ComponentStyles > WalletStyles
-@import './style/ComponentStyles/WalletStyles/Wallet00TabStyle.scss';
-@import './style/ComponentStyles/WalletStyles/Wallet01CreateStyle.scss';
-@import './style/ComponentStyles/WalletStyles/Wallet02Mnemonic.scss';
+@import './style/ComponentStyles/WalletStyles/ItemStyle.scss';
+@import './style/ComponentStyles/WalletStyles/WalletModalStyle.scss';
+@import './style/ComponentStyles/WalletStyles/WalletMnemonicStyle.scss';
 @import './style/ComponentStyles/WalletStyles/WalletMakeStyle.scss';
 @import './style/ComponentStyles/WalletStyles/WalletPinComponentStyle.scss';
-@import './style/ComponentStyles/WalletStyles/WalletSwitchButton.scss';
+@import './style/ComponentStyles/WalletStyles/WalletSwitchButtonStyle.scss';
 @import './style/ComponentStyles/WalletStyles/WalletTabStyle.scss';
 
 // ComponentStyles > GrowingStyles
 @import './style/ComponentStyles/GrowingStyles/TreeStyle.scss';
 
 html {
-  background-color: #DDDDDD;
+  background-color: #EDBE00;
 }
 
 body {

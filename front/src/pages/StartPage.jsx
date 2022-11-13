@@ -11,9 +11,7 @@ const StartPage = () => {
         <>
             <Container>
                 <Row>
-                    <Col>
-                        <StartTitle />
-                    </Col>
+                    <StartTitle />
                 </Row>
                 <Row>
                     <Col>

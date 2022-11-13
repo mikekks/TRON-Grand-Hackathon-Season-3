@@ -12,7 +12,7 @@ import WalletPinComponent from "./WalletPinComponent";
 (1031)Wallet Page에서 두번째 컴포넌트 페이지인 지갑 생성 컴포넌트입니다.
 ==============================
 */}
-const WalletCreate = ({ choosePage }) => {
+const WalletOTPPIN = ({ choosePage }) => {
 
     // 이 컴포넌트에서는 '지갑 생성을 위한 정보 입력 UI(1)', '지갑 생성 완료 UI(2)'의 두 UI를 표시합니다.
     // created의 state를 통해 표시 조건에 따라 각 UI를 표시합니다.
@@ -50,7 +50,7 @@ const WalletCreate = ({ choosePage }) => {
     }
 
     return (
-        <div>
+        <div style={{backgroundColor:"#EDBE00"}}>
             <Container>
                 {/* 만약 지갑 생성이 아직 되지 않았다면: 지갑 생성을 위한 정보를 입력한다. */}
                 {!created ?
@@ -76,4 +76,4 @@ const WalletCreate = ({ choosePage }) => {
     )
 }
 
-export default WalletCreate;
+export default WalletOTPPIN;

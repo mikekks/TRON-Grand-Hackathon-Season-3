@@ -1,0 +1,98 @@
+.WalletModalBox {
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    max-width: 350px;
+    padding-top: 30px;
+}
+
+.WalletModalTitleContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.WalletModalTitleButton {
+    font-size: 24px;
+}
+
+.WalletModalCloseButton {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:15px;
+    right:20px;
+    border-radius: 9999px;
+    border: none;
+    background-color: #EDBE00;
+    box-shadow: 0px 5px 0px #CCCCCC;
+    transition: all 0.2s ease;
+}
+
+.WalletModalCloseButton:active {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top:15px;
+    right:20px;
+    border-radius: 9999px;
+    border: none;
+    background-color: #EDBE00;
+    box-shadow: 0px 2px 0px #CCCCCC;
+    transform: translateY(5px);
+}
+
+.WalletModalSelectButton {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.WalletModalCreateButton {
+    max-width: 300px;
+    width: 300px;
+    height: 50px;
+    border-radius: 9999px;
+    background-color: #EEEEEE;
+    box-shadow: 0px 5px 0px #CCCCCC;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.WalletModalCreateButton:active {
+    max-width: 300px;
+    width: 300px;
+    height: 50px;
+    border-radius: 9999px;
+    background-color: #EEEEEE;
+    box-shadow: 0px 2px 0px #CCCCCC;
+    border: none;
+    transform: translateY(5px);
+}
+
+.WalletModalImportButton {
+    max-width: 300px;
+    width: 300px;
+    height: 50px;
+    border-radius: 9999px;
+    background-color: #EDBE00;
+    box-shadow: 0px 5px 0px #CCCCCC;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.WalletModalImportButton:active {
+    max-width: 300px;
+    width: 300px;
+    height: 50px;
+    border-radius: 9999px;
+    background-color: #EDBE00;
+    box-shadow: 0px 2px 0px #CCCCCC;
+    border: none;
+    transform: translateY(5px);
+}

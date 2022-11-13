@@ -17,15 +17,15 @@ const WalletTabSpending = () => {
                 <p className="SpendingAccountTitle">Spending Account</p>
                 <Container className="SpendingAccountContainer">
                     <Row className="SpendingAccountRow">
-                        <Col><FaEthereum style={{marginRight:"10px"}}/>AAA</Col> {/* 토큰(코인)명 */}
+                        <Col><FaEthereum style={{ marginRight: "10px" }} />AAA</Col> {/* 토큰(코인)명 */}
                         <Col className="SpendingAccountBalance">5.72</Col> {/* 토큰(코인) 보유량 */}
                     </Row>
-                    <hr className="SpendingAccounthr"/>
+                    <hr className="SpendingAccounthr" />
                     <Row className="SpendingAccountRow">
                         <Col>BBB</Col> {/* 토큰(코인)명 */}
                         <Col className="SpendingAccountBalance">0</Col> {/* 토큰(코인) 보유량 */}
                     </Row>
-                    <hr className="SpendingAccounthr"/>
+                    <hr className="SpendingAccounthr" />
                     <Row className="SpendingAccountRow">
                         <Col>CCC</Col> {/* 토큰(코인)명 */}
                         <Col className="SpendingAccountBalance">0</Col> {/* 토큰(코인) 보유량 */}
@@ -36,10 +36,15 @@ const WalletTabSpending = () => {
 
             {/* Transfer button */}
             <button className="FirstTabTransferbtn">TRANSFER</button>
-            <div>
+            <div className="SpendingAccount">
+                <p className="SpendingAccountTitle">Spending Account</p>
                 <Container>
                     <Row>
-                        <Col>dasdfasdfasdfasdf</Col>
+                        <Col>
+                            <div className="ItemContainer">
+                                dasdfasdfasdfasdf
+                            </div>
+                        </Col>
                         <Col>dasdfasdfasdfasdf</Col>
                         <Col>dasdfasdfasdfasdf</Col>
                         <Col>dasdfasdfasdfasdf</Col>

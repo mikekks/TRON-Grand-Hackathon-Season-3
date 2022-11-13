@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import Modal from '@mui/material/Modal';
 import Box from '@mui/material/Box';
 
-// import useWalletStore from "../../../store/WalletStore";
+import useWalletStore from "../../../stores/WalletStore";
 import WalletTabSpending from "./WalletTabSpending";
 import WalletTabWallet from "./WalletTabWallet";
 // import usePinStore from "../../store/PinStore";
@@ -24,7 +24,7 @@ const WalletTab = ({ choosePage }) => {
     const [activeTab, setActiveTab] = useState("tab1"); // 탭 전환을 관리하는 상태
     const [open, setOpen] = useState(false); // 모달 여닫기를 관리하는 상태
 
-    //   const { walletstatus } = useWalletStore(state => state); // 지갑이 만들어졌는지 관리하는 상태
+    const { walletstatus } = useWalletStore(state => state); // 지갑이 만들어졌는지 관리하는 상태
 
     const handleClose = () => setOpen(false); // 모달 닫는 함수
     const handleOpen = () => setOpen(true); // 모달 여는 함수
@@ -34,7 +34,13 @@ const WalletTab = ({ choosePage }) => {
         setActiveTab("tab1"); // 탭1로 전환
     };
     const handleTab2 = () => {
-        setActiveTab("tab2"); // 탭2로 전환
+        if (walletstatus == false) { // 만약 지갑이 없다면
+            handleOpen(); // 지갑 만들기 modal 열기
+        }
+        else { // 만약 지갑이 있다면
+            // (추가 예정) 핀번호를 확인하고
+            setActiveTab("tab2"); // 탭2로 전환
+        }
     };
 
     const SecondTabModal = () => {
