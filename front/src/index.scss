@@ -28,6 +28,13 @@
 // ComponentStyles > StakingStyles
 @import './style/ComponentStyles/StakingStyles/StakingHouseStyle.scss';
 
+// ComponentStyles > ThiefStyles
+@import './style/ComponentStyles/ThiefStyles/ThiefImageStyle.scss';
+@import './style/ComponentStyles/ThiefStyles/ThiefStartButtonStyle.scss';
+@import './style/ComponentStyles/ThiefStyles/ThiefTitleStyle.scss';
+@import './style/ComponentStyles/ThiefStyles/CardStyle.scss';
+@import './style/ComponentStyles/ThiefStyles/ThiefNeedTextStyle.scss';
+
 html {
   background-color: #EDBE00;
 }

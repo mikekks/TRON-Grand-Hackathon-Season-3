@@ -7,7 +7,8 @@ import WalletPage from './pages/WalletPage';
 import GrowingFarmPage from './pages/GrowingFarmPage';
 import StakingFarmPage from './pages/StakingFarmPage';
 import TestPage from './pages/TestPage';
-import StealPage from './pages/StealPage';
+import InventoryPage from './pages/InventoryPage';
+import ThiefPage from './pages/ThiefPage';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
           <Route path="/wallet" element={<WalletPage />} />
           <Route path="/growing" element={<GrowingFarmPage />} />
           <Route path="/staking" element={<StakingFarmPage />} />
-          <Route path="/steal" element={<StealPage /> } />
+          <Route path="/thief" element={<ThiefPage /> } />
+          <Route path="/inventory" element={<InventoryPage /> } />
           <Route path="/test" element={<TestPage />} />
         </Routes>
       </Router>

@@ -17,19 +17,19 @@ const Tree = ({ mode, handleMode }) => {
 
     const HoleStore = () => {
         return (
-            <div style={{width:"40px"}}></div>
+            <div style={{width:"60px", height:"60px"}}></div>
         )
     }
 
     const ImgSpore = () => {
         return(
-            <img src={Poja} width="40px" />
+            <img src={Poja} width="60px" height="60px"/>
         )
     }
 
     const ImgBaby = () => {
         return(
-            <img src={Mush01} width="40px" />
+            <img src={Mush01} width="60px" height="60px"/>
         )
     }
 
@@ -74,7 +74,7 @@ const Tree = ({ mode, handleMode }) => {
             } else if (MushOne == "baby") {
                 return (<ImgBaby />);
             } else if (MushOne == "adult") {
-                return (<img src={Mush02} width="40px" onClick={() => MushHarvest(0)}/>);
+                return (<img src={Mush02} width="60px" height="60px"  onClick={() => MushHarvest(0)}/>);
             }
         }
         if(index==1){
@@ -85,7 +85,7 @@ const Tree = ({ mode, handleMode }) => {
             } else if (MushTwo == "baby") {
                 return (<ImgBaby />);
             } else if (MushTwo == "adult") {
-                return (<img src={Mush02} width="40px" onClick={() => MushHarvest(1)}/>);
+                return (<img src={Mush02} width="60px"  height="60px" onClick={() => MushHarvest(1)}/>);
             }
         }
         if(index==2){
@@ -96,7 +96,7 @@ const Tree = ({ mode, handleMode }) => {
             } else if (MushThree == "baby") {
                 return (<ImgBaby />);
             } else if (MushThree == "adult") {
-                return (<img src={Mush02} width="40px" onClick={() => MushHarvest(2)}/>);
+                return (<img src={Mush02} width="60px" height="60px" onClick={() => MushHarvest(2)}/>);
             }
         }
         if(index==3){
@@ -107,7 +107,7 @@ const Tree = ({ mode, handleMode }) => {
             } else if (MushFour == "baby") {
                 return (<ImgBaby />);
             } else if (MushFour == "adult") {
-                return (<img src={Mush02} width="40px" onClick={() => MushHarvest(3)}/>);
+                return (<img src={Mush02} width="60px"  height="60px" onClick={() => MushHarvest(3)}/>);
             }
         }
     }
