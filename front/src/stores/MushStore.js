@@ -2,7 +2,7 @@ import create from 'zustand';
 
 const useMushStore = create(set => ({
     
-    MushOne: "adult",
+    MushOne: "adult2",
     MushOneEXP: 0,
     MushOneNameChange: (MushOne) => set({MushOne}),
     MushOneEXPChange: () => set((state) => ({MushOneEXP: state.MushOneEXP + 1})),

@@ -15,8 +15,19 @@ const ThiefPage = () => {
     const [mode, setMode] = useState("no");
     const [thief, setThief] = useState(true);
 
+    const [amount, setAmount] = useState("");
+    const [address, setAddress] = useState("");
+
     const handleMode = (val) => {
         setMode(val);
+    }
+
+    const handleAmount = (val) => {
+        setAmount(val);
+    }
+
+    const handleAddress = (val) => {
+        setAddress(val);
     }
 
     const thiefMenu = () => {
@@ -26,7 +37,7 @@ const ThiefPage = () => {
                     <ThiefTitle />
                     <ThiefImage />
                     {thief==true ?
-                    <ThiefStartButton handleMode={handleMode} />
+                    <ThiefStartButton handleMode={handleMode} handleAmount={handleAmount} handleAddress={handleAddress}/>
                     : <ThiefNeedText />
                     }
                 </>
@@ -35,7 +46,7 @@ const ThiefPage = () => {
         else if (mode == "yes") {
             return(
                 <>
-                    <ThiefCards />
+                    <ThiefCards amount={amount} address={address}/>
                 </>
             )
         }
