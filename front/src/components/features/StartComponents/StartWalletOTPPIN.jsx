@@ -12,7 +12,7 @@ import WalletPinComponent from "../GrowingFarmComponents/WalletPinComponent";
 (1031)Wallet Page에서 두번째 컴포넌트 페이지인 지갑 생성 컴포넌트입니다.
 ==============================
 */}
-const WalletOTPPIN = ({ choosePage }) => {
+const StartWalletOTPPIN = ({ choosePage }) => {
 
     // 이 컴포넌트에서는 '지갑 생성을 위한 정보 입력 UI(1)', '지갑 생성 완료 UI(2)'의 두 UI를 표시합니다.
     // created의 state를 통해 표시 조건에 따라 각 UI를 표시합니다.
@@ -41,7 +41,7 @@ const WalletOTPPIN = ({ choosePage }) => {
         let tempVal = pinvalue.join("");
         let tempCon = confirmpinvalue.join("");
         if(tempVal==tempCon) { // 입력 핀과 확인 핀이 같으면
-            choosePage("page2_2"); // 니모닉 페이지로
+            choosePage("page02"); // 니모닉 페이지로
         } else { // 다르면
             setPinvalue(['', '', '', '']);
             setConfirmpinvalue(['', '', '', '']);
@@ -76,4 +76,4 @@ const WalletOTPPIN = ({ choosePage }) => {
     )
 }
 
-export default WalletOTPPIN;
+export default StartWalletOTPPIN;

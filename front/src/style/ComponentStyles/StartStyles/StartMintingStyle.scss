@@ -1,0 +1,78 @@
+.StartMushroomTitle {
+    position: absolute;
+    top:100px;
+    font-size: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #EDBE00;
+}
+
+.StartMushroomTitle p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.StartMushroomMintContainer {
+    position: absolute;
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    max-height: 200px;
+    background-color: #ffffff99;
+    border: 2px solid white;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 5px 0px #CB9C00;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.StartMushroomImage {
+    position: relative;
+    width: 100%;
+    max-width: 150px;
+    height: 100%;
+    max-height: 150px;
+    animation-name: zoomInOut;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+}
+
+@keyframes zoomInOut {
+    0% {
+        scale: 100%;
+    }
+
+    100% {
+        scale: 130%;
+    }
+}
+
+.StartMushroomMintButton {
+    position: absolute;
+    width: 200px;
+    bottom:200px;
+    // top: 50%;
+    left:50%;
+    transform: translateX(-50%);
+    height: 50px;
+    // transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 999px;
+    box-shadow: 0px 5px 0px #CB9C00;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.StartMushroomMintButton:active {
+    background-color: #EEEEEE;
+    border-radius: 999px;
+    box-shadow: 0px 1px 0px #CB9C00;
+    border: none;
+    transform: translate(-100px, 5px);
+}

@@ -123,6 +123,35 @@ ul.nav li.active {
     text-align: right;
 }
 
+.ItemMenuDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.ItemMenuButtonStyleOne {
+    height: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 999px;
+    background-color: #EDBE00;
+    border: none;
+    box-shadow: 0px 5px 0px #999999;
+}
+
+.ItemMenuButtonStyleTwo {
+    height: 40px;
+    width: 200px;
+    margin-bottom: 10px;
+    border-radius: 999px;
+    background-color: #EEEEEE;
+    border: none;
+    box-shadow: 0px 5px 0px #999999;
+}
+
+
+
 // ======================================
 // BELOW: WALLET Tab style ( Second Tab )
 .Wallet {

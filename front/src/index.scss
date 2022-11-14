@@ -4,11 +4,13 @@
 @import './style/ComponentStyles/GlobalStyles/GoBackButtonStyle.scss';
 @import './style/ComponentStyles/GlobalStyles/ItembarStyle.scss';
 @import './style/ComponentStyles/GlobalStyles/GlobalButton.scss';
+@import './style/ComponentStyles/GlobalStyles/LoadingScreenStyle.scss';
 
 // ComponentStyles > StartStyles
 @import './style/ComponentStyles/StartStyles/StartTitleStyle.scss';
 @import './style/ComponentStyles/StartStyles/StartImageStyle.scss';
 @import './style/ComponentStyles/StartStyles/StartButtonStyle.scss';
+@import './style/ComponentStyles/StartStyles/StartMintingStyle.scss';
 
 // ComponentStyles > WalletStyles
 @import './style/ComponentStyles/WalletStyles/InventoryStyle.scss';

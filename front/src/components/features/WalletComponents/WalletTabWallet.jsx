@@ -5,6 +5,8 @@ import Col from 'react-bootstrap/Col';
 import { FaEthereum, FaCopy } from "react-icons/fa";
 import { MdOutlineFileDownload, MdNorthEast, MdOutlineSettings } from "react-icons/md";
 import { CgArrowsExchangeAlt } from "react-icons/cg";
+import Spore from '../../../assets/spore.png'
+import Mush02 from '../../../assets/mush02.png';
 {/*
 ==============================
 (1031)WALLET Tab 컴포넌트입니다.

@@ -11,7 +11,7 @@ const GoBackButton = () => {
             <button
                 className="GoBackButton"
                 onClick={() => {
-                    navigate(-1);
+                    navigate('/growing');
                 }}
             >
                 <MdOutlineArrowBackIosNew size={24}/>                

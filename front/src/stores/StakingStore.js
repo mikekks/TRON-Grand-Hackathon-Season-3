@@ -1,10 +1,8 @@
 import create from 'zustand';
 
-const useStakingStore = create(set => ({    
-    // MushFive: "hole",
-    // MushFiveEXP: 0,
-    // MushFiveNameChange: () => set((state) => ({MushFive: state.MushFive})),
-    // MushFiveEXPChange: () => set((state) => ({MushFive: state.MushFive + 1})),
+const useStakingStore = create(set => ({
+    StakingState: "ready",
+    ChangeStakingState: (StakingState) => set({StakingState}),
 }))
 
 export default useStakingStore;

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Poja from '../../../assets/poja.png';
+import Poja from '../../../assets/spore.png';
 import Mush02 from '../../../assets/mush02.png';
 import useMushStore from "../../../stores/MushStore";
 import { MdOutlineRunningWithErrors } from "react-icons/md";

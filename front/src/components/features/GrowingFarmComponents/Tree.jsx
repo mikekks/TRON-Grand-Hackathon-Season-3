@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import TreeImage from "../../../assets/tree.png";
 import TreeNew from "../../../assets/treenew01.png";
-import Poja from '../../../assets/poja.png';
+import Poja from '../../../assets/spore.png';
 import Mush01 from '../../../assets/mush01.png';
 import Mush02 from '../../../assets/mush02.png';
 import { useEffect } from "react";

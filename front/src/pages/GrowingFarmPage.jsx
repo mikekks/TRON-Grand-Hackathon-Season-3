@@ -5,6 +5,7 @@ import GrowingItembar from "../components/features/GrowingFarmComponents/Growing
 import TopBalancebar from "../components/features/GlobalFeatures/TopBalancebar";
 import InteractionMenu from "../components/features/GrowingFarmComponents/InteractionMenu";
 import Tree from "../components/features/GrowingFarmComponents/Tree";
+import LoadingScreen from "../components/features/GlobalFeatures/LoadingScreen";
 
 const GrowingFarmPage = () => {
     
