@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import BottomNavbar from "../components/features/GlobalFeatures/BottomNavbar";
-import Itembar from "../components/features/GlobalFeatures/Itembar";
+import GrowingItembar from "../components/features/GrowingFarmComponents/GrowingItembar";
+// import Itembar from "../components/features/GlobalFeatures/Itembar";
 import TopBalancebar from "../components/features/GlobalFeatures/TopBalancebar";
+import InteractionMenu from "../components/features/GrowingFarmComponents/InteractionMenu";
 import Tree from "../components/features/GrowingFarmComponents/Tree";
 
 const GrowingFarmPage = () => {
@@ -16,7 +18,8 @@ const GrowingFarmPage = () => {
         <div>
             <TopBalancebar />
             <Tree mode = {mode} handleMode = {handleMode} />
-            <Itembar handleMode = {handleMode} />
+            <InteractionMenu />
+            <GrowingItembar handleMode = {handleMode} />
             <BottomNavbar />
         </div>
     )

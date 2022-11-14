@@ -20,7 +20,11 @@
 @import './style/ComponentStyles/WalletStyles/WalletTabStyle.scss';
 
 // ComponentStyles > GrowingStyles
+@import './style/ComponentStyles/GrowingStyles/InteractionMenuStyle.scss';
 @import './style/ComponentStyles/GrowingStyles/TreeStyle.scss';
+
+// ComponentStyles > StakingStyles
+@import './style/ComponentStyles/StakingStyles/StakingHouseStyle.scss';
 
 html {
   background-color: #EDBE00;

@@ -5,8 +5,9 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import StartPage from './pages/StartPage';
 import WalletPage from './pages/WalletPage';
 import GrowingFarmPage from './pages/GrowingFarmPage';
-import StakingFarmPage from './pages/StakingFarm';
+import StakingFarmPage from './pages/StakingFarmPage';
 import TestPage from './pages/TestPage';
+import StealPage from './pages/StealPage';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/wallet" element={<WalletPage />} />
           <Route path="/growing" element={<GrowingFarmPage />} />
           <Route path="/staking" element={<StakingFarmPage />} />
+          <Route path="/steal" element={<StealPage /> } />
           <Route path="/test" element={<TestPage />} />
         </Routes>
       </Router>
