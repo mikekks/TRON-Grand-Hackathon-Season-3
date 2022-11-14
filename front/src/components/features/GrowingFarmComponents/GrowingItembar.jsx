@@ -35,9 +35,11 @@ const GrowingItembar = ({ handleMode }) => {
         }
     }
 
+    //잠깐 밑에 내려갔다오겠습니다
+
     const PojaItem = () => {
         return (
-            <img src={Poja} style={{ width: "58px", borderRadius: "5px" }} onClick={() => handleEvent()} />
+            <img src={Poja} style={{ borderRadius: "5px" }} onClick={() => handleEvent()} />
         )
     }
 

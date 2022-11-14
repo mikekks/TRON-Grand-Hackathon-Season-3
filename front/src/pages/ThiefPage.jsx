@@ -13,7 +13,7 @@ import ThiefTitle from "../components/features/ThiefComponents/ThiefTitle";
 const ThiefPage = () => {
 
     const [mode, setMode] = useState("no");
-    const [thief, setThief] = useState(false);
+    const [thief, setThief] = useState(true);
 
     const handleMode = (val) => {
         setMode(val);

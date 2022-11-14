@@ -41,3 +41,14 @@
     align-items: center;
     box-shadow: 0px 5px 0px #CB9C00;
 }
+
+.CardImage {
+    overflow: hidden;
+    position: absolute;
+    width: 108px;
+    height: 159px;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    border-radius: 8px;
+}

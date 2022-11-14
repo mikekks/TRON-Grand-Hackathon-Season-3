@@ -7,6 +7,7 @@ import Col from 'react-bootstrap/Col';
 import { useEffect } from "react";
 import PoisonMush from '../../../assets/poisonmush.png';
 import LoadingScreen from "../GlobalFeatures/LoadingScreen";
+import CardBack from '../../../assets/cardback.png';
 
 
 const ThiefCards = () => {
@@ -21,6 +22,8 @@ const ThiefCards = () => {
         // 결과가 나올 때까지, 로딩 화면을 출력한다.
         console.log("Cards handleClick");
         setDisplay("block");
+
+
 
         // 확률이 나오면, UI작업을 진행한다.
         setDisplay("none");
@@ -42,18 +45,24 @@ const ThiefCards = () => {
                         <div className="CardDiv">
                             <ReactCardFlip isFlipped={isflipped[0]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(0)}>
+                                    <img src={CardBack} className="CardImage" />
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(0)}>
                                 </div>
                             </ReactCardFlip>
                             <ReactCardFlip isFlipped={isflipped[1]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(1)}>
+                                <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(1)}>
+
                                 </div>
                             </ReactCardFlip>
                             <ReactCardFlip isFlipped={isflipped[2]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(2)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(2)}>
                                     {/* <img src={PoisonMush} /> */}
@@ -68,18 +77,24 @@ const ThiefCards = () => {
                         <div className="CardDiv">
                             <ReactCardFlip isFlipped={isflipped[3]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(3)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(3)}>
                                 </div>
                             </ReactCardFlip>
                             <ReactCardFlip isFlipped={isflipped[4]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(4)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(4)}>
                                 </div>
                             </ReactCardFlip>
                             <ReactCardFlip isFlipped={isflipped[5]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(5)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(5)}>
                                 </div>
@@ -93,18 +108,24 @@ const ThiefCards = () => {
                         <div className="CardDiv">
                             <ReactCardFlip isFlipped={isflipped[6]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(6)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(6)}>
                                 </div>
                             </ReactCardFlip>
                             <ReactCardFlip isFlipped={isflipped[7]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(7)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(7)}>
                                 </div>
                             </ReactCardFlip>
                             <ReactCardFlip isFlipped={isflipped[8]} flipDirection="horizontal">
                                 <div className="CardFront" onClick={() => handleClick(8)}>
+                                    <img src={CardBack} className="CardImage" />
+
                                 </div>
                                 <div className="CardBack" onClick={() => handleClick(8)}>
                                 </div>
@@ -113,7 +134,7 @@ const ThiefCards = () => {
                     </Col>
                 </Row>
             </Container>
-            <LoadingScreen display={display}/>
+            <LoadingScreen display={display} />
         </>
     )
 }

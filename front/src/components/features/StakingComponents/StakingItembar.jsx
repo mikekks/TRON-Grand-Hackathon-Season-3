@@ -41,7 +41,7 @@ const StakingItembar = ({ StakingState, handleMode }) => {
 
     const BigMushItem = () => {
         return (
-            <img src={Mush02} onClick={() => handleOpenStartModal()} style={{ width: "58px", borderRadius: "5px" }} />
+            <img src={Mush02} onClick={() => handleOpenStartModal()} style={{ width: "50px", borderRadius: "5px" }} />
         )
     }
 
@@ -109,15 +109,15 @@ const StakingItembar = ({ StakingState, handleMode }) => {
         <>
             {StakingState == "ready" ?
                 <div className="Itembar">
-                    <div className="ItemElement"><img src={Mush02} onClick={() => handleOpenStartModal()} style={{ width: "58px", borderRadius: "5px" }} /></div>
-                    <div className="ItemElement"><img src={Mush02} onClick={() => handleOpenStartModal()} style={{ width: "58px", borderRadius: "5px" }} /></div>
+                    <div className="ItemElement"><img src={Mush02} onClick={() => handleOpenStartModal()} style={{ borderRadius: "5px" }} /></div>
+                    <div className="ItemElement"><img src={Mush02} onClick={() => handleOpenStartModal()} style={{ borderRadius: "5px" }} /></div>
                     <div className="ItemElement"></div>
                     <div className="ItemElement"></div>
                 </div>
                 :
                 <div className="Itembar">
-                    <div className="ItemElement"><img src={Mush02} style={{ width: "58px", borderRadius: "5px" }} /></div>
-                    <div className="ItemElement"><img src={Mush02} style={{ width: "58px", borderRadius: "5px" }} /></div>
+                    <div className="ItemElement"><img src={Mush02} style={{ borderRadius: "5px" }} /></div>
+                    <div className="ItemElement"><img src={Mush02} style={{ borderRadius: "5px" }} /></div>
                     <div className="ItemElement"></div>
                     <div className="ItemElement"></div>
                 </div>
