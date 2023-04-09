@@ -2,7 +2,14 @@
 
 <img width="523" alt="스크린샷 2023-04-09 오후 4 44 04" src="https://user-images.githubusercontent.com/100754581/230760661-0511a586-ea28-414f-a17f-baa0100f37b6.png">
 
-![스크린샷 2023-04-09 오후 4.17.07.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/fb0c188e-e7ee-4015-be70-71e86f53d0ea/%E1%84%89%E1%85%B3%E1%84%8F%E1%85%B3%E1%84%85%E1%85%B5%E1%86%AB%E1%84%89%E1%85%A3%E1%86%BA_2023-04-09_%E1%84%8B%E1%85%A9%E1%84%92%E1%85%AE_4.17.07.png)
+<img width="520" alt="스크린샷 2023-04-09 오후 4 44 47" src="https://user-images.githubusercontent.com/100754581/230760674-e5e0cbde-1699-4705-804b-02177a42027a.png">
+
+<img width="939" alt="스크린샷 2023-04-09 오후 4 45 22" src="https://user-images.githubusercontent.com/100754581/230760698-1ce28d01-d310-4272-8172-e144ad6f2869.png">
+
+<img width="948" alt="스크린샷 2023-04-09 오후 4 45 45" src="https://user-images.githubusercontent.com/100754581/230760715-faffa20c-7478-43c5-b731-51743b99f501.png">
+
+<img width="949" alt="스크린샷 2023-04-09 오후 4 46 11" src="https://user-images.githubusercontent.com/100754581/230760734-0f8b7252-ca16-4ae2-a06e-b0e92f48c0c7.png">
+
 
 ### 영감
 
