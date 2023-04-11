@@ -1,16 +1,5 @@
 # Tron Mushroom
 
-<img width="523" alt="스크린샷 2023-04-09 오후 4 44 04" src="https://user-images.githubusercontent.com/100754581/230760661-0511a586-ea28-414f-a17f-baa0100f37b6.png">
-
-<img width="520" alt="스크린샷 2023-04-09 오후 4 44 47" src="https://user-images.githubusercontent.com/100754581/230760674-e5e0cbde-1699-4705-804b-02177a42027a.png">
-
-<img width="939" alt="스크린샷 2023-04-09 오후 4 45 22" src="https://user-images.githubusercontent.com/100754581/230760698-1ce28d01-d310-4272-8172-e144ad6f2869.png">
-
-<img width="948" alt="스크린샷 2023-04-09 오후 4 45 45" src="https://user-images.githubusercontent.com/100754581/230760715-faffa20c-7478-43c5-b731-51743b99f501.png">
-
-<img width="949" alt="스크린샷 2023-04-09 오후 4 46 11" src="https://user-images.githubusercontent.com/100754581/230760734-0f8b7252-ca16-4ae2-a06e-b0e92f48c0c7.png">
-
-
 ### 영감
 
 현재 많은 사용자들이 Crypto WInter로 블록체인을 떠나고 있습니다. 암호화폐 조상들이 약세장 때마다 즐겼던 전통적인 플레이는 Fomo3D 프로젝트와 같은 'GAME'이었습니다. 이때 우리의 역할은 사용자에게 재미를 제공하고 생태계를 유지하는 것이라고 생각합니다. 니어를 기반으로 올겨울 많은 유저들이 모여 버틸 수 있는 게임을 만들고자 합니다.
